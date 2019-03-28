@@ -1,4 +1,4 @@
-package com.loiclude.PtitQuiz.service.subject;
+package com.loiclude.PtitQuiz.service;
 
 import com.loiclude.PtitQuiz.common.ResponseType;
 import com.loiclude.PtitQuiz.common.RestCode;
@@ -18,8 +18,8 @@ public class SubjectServiceImpl {
     @Autowired
     SubjectRepository subjectRepository;
 
-    @Autowired
-    SubjectMapperService mapperService;
+//    @Autowired
+//    SubjectMapperService mapperService;
 
     public PtitResponse getAll() {
         PtitResponse ptitResponse = new PtitResponse();
