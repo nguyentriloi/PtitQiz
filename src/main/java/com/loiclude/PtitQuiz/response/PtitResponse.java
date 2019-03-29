@@ -1,6 +1,8 @@
 package com.loiclude.PtitQuiz.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.loiclude.PtitQuiz.common.ResponseType;
+import com.loiclude.PtitQuiz.common.RestCode;
 
 public class PtitResponse {
     private String type;
@@ -12,6 +14,9 @@ public class PtitResponse {
     private Object data;
 
     public PtitResponse() {
+        this.type = ResponseType.ERROR.getValue();
+        this.code = RestCode.ERROR_INTERNAL_SERVER.getCode();
+        this.message = RestCode.ERROR_INTERNAL_SERVER.getDescription();
     }
 
     public PtitResponse(String type, int code, String message) {
